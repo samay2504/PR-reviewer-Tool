@@ -1,0 +1,80 @@
+{
+  "request_id": "demo-123",
+  "repo": "facebook/react",
+  "pr_number": 31000,
+  "diff_hash": "abc123def456",
+  "cached": false,
+  "provider": "groq_llama-3.1-8b-instant",
+  "comments": [
+    {
+      "file": "src/components/Button.jsx",
+      "line_start": 15,
+      "line_end": 18,
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "message": "Potential XSS vulnerability: User input is being rendered without sanitization",
+      "suggestion_patch": "- <div dangerouslySetInnerHTML={{__html: userInput}} />\n+ <div>{sanitize(userInput)}</div>",
+      "agent": "security"
+    },
+    {
+      "file": "src/utils/api.js",
+      "line_start": 42,
+      "line_end": 45,
+      "severity": "MEDIUM",
+      "category": "PERFORMANCE",
+      "message": "Inefficient loop: Consider using Array.filter() instead of manual iteration",
+      "suggestion_patch": "- for (let i = 0; i < items.length; i++) {\n-   if (items[i].active) result.push(items[i]);\n- }\n+ const result = items.filter(item => item.active);",
+      "agent": "performance"
+    },
+    {
+      "file": "src/hooks/useData.js",
+      "line_start": 23,
+      "line_end": 28,
+      "severity": "LOW",
+      "category": "STYLE",
+      "message": "Inconsistent naming: Variable should use camelCase instead of snake_case",
+      "suggestion_patch": "- const user_data = fetchUserData();\n+ const userData = fetchUserData();",
+      "agent": "style"
+    },
+    {
+      "file": "src/components/Modal.jsx",
+      "line_start": 8,
+      "line_end": 12,
+      "severity": "MEDIUM",
+      "category": "SECURITY",
+      "message": "Missing input validation: Props should be validated before use",
+      "suggestion_patch": "+ if (!isValid(props.data)) throw new Error('Invalid data');\n  return <div>{props.data}</div>;",
+      "agent": "security"
+    },
+    {
+      "file": "src/services/auth.js",
+      "line_start": 56,
+      "line_end": 60,
+      "severity": "HIGH",
+      "category": "SECURITY",
+      "message": "Hardcoded credentials detected: API keys should be in environment variables",
+      "suggestion_patch": "- const API_KEY = 'sk-1234567890abcdef';\n+ const API_KEY = process.env.REACT_APP_API_KEY;",
+      "agent": "security"
+    }
+  ],
+  "summary": {
+    "total_comments": 5,
+    "total_files": 5,
+    "agents_run": ["security", "performance", "style"],
+    "executive_summary": "This PR introduces several security concerns that need immediate attention. Two high-severity issues were found related to XSS vulnerabilities and hardcoded credentials. The code also contains performance inefficiencies and style inconsistencies that should be addressed.",
+    "recommendation": "REQUEST_CHANGES",
+    "statistics": {
+      "severity_counts": {
+        "critical": 0,
+        "high": 2,
+        "medium": 2,
+        "low": 1
+      },
+      "category_counts": {
+        "SECURITY": 3,
+        "PERFORMANCE": 1,
+        "STYLE": 1
+      }
+    }
+  }
+}
