@@ -1,0 +1,35 @@
+id: style_readability_v1
+version: "1.0.0"
+description: "Code style and readability analysis template"
+variables:
+  - name: code_snippet
+    type: str
+  - name: file_path
+    type: str
+  - name: language
+    type: str
+template: |
+  As a code quality expert, review this code for style and readability:
+  
+  File: {file_path}
+  Language: {language}
+  
+  Code:
+  {code_snippet}
+  
+  Assess:
+  - Naming conventions (variables, functions, classes)
+  - Code complexity and readability
+  - Missing or inadequate documentation
+  - Function/method length
+  - Code duplication
+  - Proper use of language idioms
+  - Error handling clarity
+  
+  Return JSON array with:
+  - line: int
+  - severity: [MEDIUM, LOW]
+  - category: STYLE
+  - issue: string
+  - message: string
+  - suggestion: string

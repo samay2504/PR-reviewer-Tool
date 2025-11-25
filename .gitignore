@@ -1,0 +1,55 @@
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+coverage.xml
+*.cover
+
+# Logs
+*.log
+logs/
+
+# Redis
+dump.rdb
+
+# Cache
+.cache/
+*.cache
+diskcache/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+templates/.temp/

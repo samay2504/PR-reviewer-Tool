@@ -1,0 +1,35 @@
+id: performance_analysis_v1
+version: "1.0.0"
+description: "Performance optimization analysis template"
+variables:
+  - name: code_snippet
+    type: str
+  - name: file_path
+    type: str
+  - name: language
+    type: str
+template: |
+  As a performance optimization expert, analyze this code for performance issues:
+  
+  File: {file_path}
+  Language: {language}
+  
+  Code:
+  {code_snippet}
+  
+  Look for:
+  - Inefficient algorithms (O(n²) or worse)
+  - Unnecessary loops or iterations
+  - Repeated database/API calls
+  - Large memory allocations
+  - Synchronous operations that could be async
+  - Missing caching opportunities
+  - Inefficient data structures
+  
+  Return JSON array with:
+  - line: int
+  - severity: [HIGH, MEDIUM, LOW]
+  - category: PERFORMANCE
+  - issue: string
+  - message: string
+  - suggestion: string (optimization approach)

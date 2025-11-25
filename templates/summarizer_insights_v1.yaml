@@ -1,0 +1,68 @@
+id: "summarizer_insights_v1"
+version: "1.0"
+description: "Template for generating executive summary insights from aggregated agent findings"
+
+variables:
+  - name: "total_files"
+    description: "Total number of files changed in the PR"
+  - name: "total_issues"
+    description: "Total number of issues found across all agents"
+  - name: "critical_count"
+    description: "Number of critical severity issues"
+  - name: "high_count"
+    description: "Number of high severity issues"
+  - name: "severity_breakdown"
+    description: "Dictionary of severity levels and their counts"
+  - name: "category_breakdown"
+    description: "Dictionary of issue categories and their counts"
+  - name: "top_files"
+    description: "List of tuples (filename, issue_count) for most problematic files"
+
+template: |
+  You are a senior software architect and code reviewer analyzing a pull request. Based on the automated analysis results below, provide actionable insights and recommendations.
+  
+  ## Pull Request Analysis Summary
+  
+  **Files Changed:** {total_files}
+  **Total Issues Detected:** {total_issues}
+  
+  ### Severity Distribution
+  - Critical Issues: {critical_count}
+  - High Priority Issues: {high_count}
+  
+  ### Issue Categories
+  {category_breakdown}
+  
+  ### Most Problematic Files
+  {top_files}
+  
+  ## Your Task
+  
+  Provide a concise executive summary with:
+  
+  1. **Overall Assessment** (2-3 sentences)
+     - What is the general quality of this code change?
+     - Are there any major concerns or patterns you notice?
+  
+  2. **Top 3 Action Items** (ordered by priority)
+     - What should the developer address first?
+     - Be specific about which categories or files need attention
+  
+  3. **Merge Recommendation**
+     - Should this PR be approved, require changes, or be blocked?
+     - Justify your recommendation in 1-2 sentences
+  
+  4. **Positive Observations** (if any)
+     - What did the developer do well?
+     - Any good practices worth highlighting?
+  
+  ## Guidelines
+  
+  - Be constructive and specific
+  - Focus on the most impactful issues first
+  - Consider the size and scope of the change
+  - Balance thoroughness with pragmatism
+  - If there are security issues, prioritize them
+  - Recognize good practices when present
+  
+  Keep your response concise (200-300 words) and actionable.

@@ -1,0 +1,36 @@
+id: security_analysis_v1
+version: "1.0.0"
+description: "Focused security analysis template"
+variables:
+  - name: code_snippet
+    type: str
+  - name: file_path
+    type: str
+  - name: language
+    type: str
+template: |
+  As a security expert, analyze this code snippet for security vulnerabilities:
+  
+  File: {file_path}
+  Language: {language}
+  
+  Code:
+  {code_snippet}
+  
+  Check for:
+  - SQL injection vulnerabilities
+  - Cross-site scripting (XSS) risks
+  - Hardcoded secrets or credentials
+  - Insecure cryptography
+  - Command injection
+  - Path traversal issues
+  - Insecure deserialization
+  - Missing input validation
+  
+  Return JSON array with format:
+  - line: int
+  - severity: [CRITICAL, HIGH, MEDIUM, LOW]
+  - category: SECURITY
+  - issue: string (vulnerability type)
+  - message: string (detailed explanation)
+  - recommendation: string (how to fix)
