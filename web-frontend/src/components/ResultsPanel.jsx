@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import IssueItem from './IssueItem';
+import { formatToParagraphs } from '../utils/formatText';
 
 export default function ResultsPanel({ result, onCopy }) {
   const [filter, setFilter] = useState('all');
@@ -107,9 +108,13 @@ ${summary.executive_summary || 'No summary available'}
             marginBottom: 'var(--space-md)'
           }}>
             <strong style={{ display: 'block', marginBottom: '0.5rem' }}>Executive Summary:</strong>
-            <p style={{ margin: 0, fontSize: '0.875rem', lineHeight: '1.6' }}>
-              {summary.executive_summary}
-            </p>
+            <div style={{ margin: 0, fontSize: '0.875rem', lineHeight: '1.8' }}>
+              {formatToParagraphs(summary.executive_summary).map((paragraph, idx) => (
+                <p key={idx} style={{ margin: idx > 0 ? '1rem 0 0 0' : 0 }}>
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </div>
         )}
         
