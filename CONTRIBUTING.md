@@ -7,8 +7,8 @@ Thank you for your interest in contributing! This guide will help you get starte
 ### 1. Fork and Clone
 
 ```bash
-git clone https://github.com/yourusername/pr-review-agent.git
-cd pr-review-agent
+git clone https://github.com/samay2504/PR-reviewer-Tool.git
+cd PR-reviewer-Tool
 ```
 
 ### 2. Set Up Environment
@@ -252,9 +252,10 @@ docker-compose logs -f app
 
 ## Getting Help
 
-- **Issues**: [GitHub Issues](https://github.com/yourusername/pr-review-agent/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/pr-review-agent/discussions)
-- **Documentation**: See `README.md` and `docs/`
+- **Repository**: [samay2504/PR-reviewer-Tool](https://github.com/samay2504/PR-reviewer-Tool)
+- **Issues**: [GitHub Issues](https://github.com/samay2504/PR-reviewer-Tool/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/samay2504/PR-reviewer-Tool/discussions)
+- **Documentation**: See `README.md`
 
 ## Code of Conduct
 

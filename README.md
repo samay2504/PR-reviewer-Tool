@@ -2,9 +2,9 @@
 
 > **Automated Pull Request Review System** with Multi-Agent Analysis, LLM Integration, and Redis Caching
 
-[![CI](https://github.com/yourusername/pr-review-agent/workflows/CI/badge.svg)](https://github.com/yourusername/pr-review-agent/actions)
-[![codecov](https://codecov.io/gh/yourusername/pr-review-agent/branch/main/graph/badge.svg)](https://codecov.io/gh/yourusername/pr-review-agent)
+[![GitHub](https://img.shields.io/badge/GitHub-samay2504/PR--reviewer--Tool-blue?logo=github)](https://github.com/samay2504/PR-reviewer-Tool)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11%2B-blue.svg)](https://www.python.org/)
 
 ## Overview
 
@@ -73,8 +73,8 @@ PR Review Agent is a production-ready, open-source system for automated code rev
 
 ```powershell
 # 1. Clone repository
-git clone https://github.com/yourusername/pr-review-agent.git
-cd pr-review-agent
+git clone https://github.com/samay2504/PR-reviewer-Tool.git
+cd PR-reviewer-Tool
 
 # 2. Create virtual environment
 python -m venv .venv
@@ -97,8 +97,8 @@ The API will be available at `http://localhost:8000`
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/pr-review-agent.git
-cd pr-review-agent
+git clone https://github.com/samay2504/PR-reviewer-Tool.git
+cd PR-reviewer-Tool
 
 # 2. Create virtual environment
 python3 -m venv .venv
@@ -451,9 +451,10 @@ MIT License - see [LICENSE](LICENSE) file
 
 ## Support
 
-- **Documentation**: [Full docs](docs/)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/pr-review-agent/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/pr-review-agent/discussions)
+- **Repository**: [GitHub](https://github.com/samay2504/PR-reviewer-Tool)
+- **Issues**: [GitHub Issues](https://github.com/samay2504/PR-reviewer-Tool/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/samay2504/PR-reviewer-Tool/discussions)
+- **Live Demo**: [GitHub Pages](https://samay2504.github.io/PR-reviewer-Tool/)
 
 ---
 

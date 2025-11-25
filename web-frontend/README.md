@@ -1,6 +1,10 @@
 # PR Review Agent - Frontend
 
+> **Part of**: [samay2504/PR-reviewer-Tool](https://github.com/samay2504/PR-reviewer-Tool)
+
 A minimalist, production-ready static frontend for the PR Review Agent with a sleek black/white/red aesthetic. This single-page application allows users to analyze GitHub pull requests using AI-powered agents for security, performance, and style checks.
+
+**Live Demo**: [https://samay2504.github.io/PR-reviewer-Tool/](https://samay2504.github.io/PR-reviewer-Tool/)
 
 ## ✨ Features
 
@@ -341,8 +345,10 @@ MIT License - see root LICENSE file
 
 ## 📞 Support
 
+- **Repository**: [samay2504/PR-reviewer-Tool](https://github.com/samay2504/PR-reviewer-Tool)
 - **Issues**: [GitHub Issues](https://github.com/samay2504/PR-reviewer-Tool/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/samay2504/PR-reviewer-Tool/discussions)
+- **Live Frontend**: [https://samay2504.github.io/PR-reviewer-Tool/](https://samay2504.github.io/PR-reviewer-Tool/)
 
 ---
 
